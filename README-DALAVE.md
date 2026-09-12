@@ -41,7 +41,7 @@ Make your edits to the modules, then stage and commit them
 
 ```
 git add modules/
-git commit -m "feat(net-vpc): apply internal org networking defaults"
+git commit -m "feat: add initial readme for dalave"
 ```
 
 ### Create your custom tag
@@ -62,6 +62,6 @@ Verification: Run `git tag -l "v58.0.0-dalave*"`. You should see v58.0.0-dalave.
 ### Push Your Branch and Custom Tag to Origin
 
 ```
-git push origin internal-58.0.0
+git push --set-upstream origin internal-v58.0.0
 git push origin v58.0.0-dalave.1.0.0
 ```
