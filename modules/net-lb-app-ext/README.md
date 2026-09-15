@@ -35,7 +35,6 @@ Due to the complexity of the underlying resources, changes to the configuration 
 - [Deploying changes to load balancer configurations](#deploying-changes-to-load-balancer-configurations)
   - [Changing the Network Endpoint Group](#changing-the-network-endpoint-group)
   - [Updating SSL certificate](#updating-ssl-certificate)
-- [Recipes](#recipes)
 - [Files](#files)
 - [Variables](#variables)
 - [Outputs](#outputs)
@@ -1229,6 +1228,7 @@ After applying this change, you can update the backend service to point to the n
       port_name     = "http"
     }
   }
+# tftest skip reason=tutorial-step
 ```
 
 If you prefer to maintain the original naming convention, you can modify `neg-0` to point to the `hello2` service. After making this change, switch the backend configuration back to `neg-0`, and finally remove `neg-1`.
@@ -1262,10 +1262,6 @@ After provisioning this change, and verifying that the new certificate is provis
 
 <!-- TFDOC OPTS files:1 -->
 <!-- BEGIN TFDOC -->
-## Recipes
-
-- [Expose Cloud Run service with Global External Application Load Balancer protected by IAP](https://github.com/GoogleCloudPlatform/cloud-foundation-fabric/blob/master/modules/net-lb-app-ext/recipe-cloud-run-iap)
-
 ## Files
 
 | name | description | resources |
