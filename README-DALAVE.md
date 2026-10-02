@@ -37,6 +37,11 @@ git checkout -b internal-v58.0.0 v58.0.0
 
 Verification: Run `git log -1 --oneline`. The top commit will match Google's official release commit for v58.0.0.
 
+Pull the changes you made before from main to new banch
+```
+ git pull origin main
+```
+
 Make your edits to the modules, then stage and commit them
 
 ```
