@@ -130,6 +130,10 @@ resource "google_project" "project" {
       condition     = var.skip_delete == null
       error_message = "skip_delete is deprecated. Use deletion_policy."
     }
+    # Added by Dalave LLC to centrally manage the billing account attachment.
+    ignore_changes = [
+      billing_account
+    ]
   }
 }
 
