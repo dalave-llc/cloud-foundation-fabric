@@ -23,5 +23,5 @@ resource "google_project_iam_binding" "no_viewer" {
 
 resource "time_sleep" "wait_for_project" {
   depends_on = [google_project.project]
-  create_duration = "30s"
+  create_duration = "60s"
 }
