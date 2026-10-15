@@ -60,13 +60,50 @@ v58.0.0-dalave.1.0.0 - This is dalave's first version of terraform modules.
 
 ```
 git tag -a v58.0.0-dalave.1.0.0 -m "CFF v58.0.0 with internal first version 1.0.0"
+
+git tag -a v59.0.0-dalave.2.0.0 -m "CFF v59.0.0 with internal second version 2.0.0"
 ```
 
-Verification: Run `git tag -l "v58.0.0-dalave*"`. You should see v58.0.0-dalave.1.0.0 listed.
+Verification: Run `git tag -l "v58.0.0-dalave*"` or `git tag -l "v59.0.0-dalave*"`. You should see v58.0.0-dalave.1.0.0 listed.
 
 ### Push Your Branch and Custom Tag to Origin
 
 ```
 git push --set-upstream origin internal-v58.0.0
 git push origin v58.0.0-dalave.1.0.0
+```
+
+### Create new minor version
+
+run `git branch` and make sure you are on the right branch example
+
+```
+git branch
+  internal-v58.0.0
+* internal-v59.0.0
+  main
+  master
+```
+
+```
+git pull origin main
+```
+
+Make changes to modules and commit those
+```
+git add .
+git commit -m "fix/feat: description" .
+git push
+```
+
+Create a tag
+
+```
+git tag -a v59.0.0-dalave.2.0.1 -m "CFF v59.0.0 with internal second version 2.0.1"
+```
+
+Push the tag
+
+```
+git push origin v59.0.0-dalave.2.0.1
 ```
